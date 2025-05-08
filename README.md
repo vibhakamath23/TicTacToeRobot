@@ -7,6 +7,8 @@ Execution of this code requires running two separate workspaces: One to define c
 - Huskylens Camera connected to computer through USB
 - XRP and Gripper connected to computer through USB and battery powered
 
+Note that this README is oriented for users that are on macOS. If using another operating system, terminal commands will differ, and the config files used for MQTT communication in 'Camera & Game' will need to be modified. 
+
 # PART ONE: XRP & MQTT
 
 Note: Along with setting up the MQTT server, this folder also contains 'ServoCalibration.py', which can be used to redefine the hardcoded degrees and angles used in the position functions in 'XRP_MQTT.py'. This file allows for trial and error testing of the XRP + Gripper system to determine which degree values for each degree of freedom of the system (XRP base and arm joints) correspond to the orientation required for each space on the board. If using a different XRP system than the original in this project, first run the existing position functions, and if they do not line up properly with the spaces on the tic tac toe board being used, use the calibration file to find appropriate degree values.
