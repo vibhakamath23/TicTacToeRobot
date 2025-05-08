@@ -35,5 +35,5 @@ Then run the file within terminal with:
 ```bash
 python3 TicTacToeGame.py
 ```
-This should begin the game. As long as this is running concurrently with 'XRP_MQTT.py', the XRP will play a full game against a human opponent!
+This should begin the game. As long as this is running concurrently with 'XRP_MQTT.py', the XRP will play a full game against a human opponent! 
 
