@@ -18,7 +18,7 @@ def initialize_wifi(ssid, password):
 
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
-    #print(ssid,password)
+    
     # Connect to the network
     wlan.connect(ssid, password)
 
@@ -58,7 +58,6 @@ def connect_mqtt():
 
     id = (''.join(['{:02x}'.format(b) for b in unique_id()]))
     
-    #print(id)
     if not initialize_wifi(config.get("ssid"),config.get("password")):
         return None;
     try:
