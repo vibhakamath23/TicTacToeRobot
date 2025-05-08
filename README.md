@@ -21,7 +21,7 @@ Once this appears, MQTT Explorer can be used to publish integer messages to 'top
 
 # PART TWO: Camera & Game
 
-Once successful connection with the MQTT server has been established, the second part of execution is to set up the camera and run game logic. Connect the Huskylens and determine which port (if using MAC) with:
+Once successful connection with the MQTT server has been established, the second part of execution is to set up the camera and run game logic. Note that this workspace also contains an MQTT library, but it is different than that used for the XRP as it does not use the MicroPico library. Connect the Huskylens and determine which port (if using MAC) with:
 
 ```bash
 ls /dev/tty*
