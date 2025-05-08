@@ -11,9 +11,15 @@ servo2 = Servo.get_default_servo(2)
 c = connect_mqtt()
 c.ping()
 
-# Define the positions as functions
+'''
+POSITION FUNCTIONS FOR XRP
+- These define hardcoded degree values for each of the degrees of freedom on the XRP to reach 
+each of the nine tic tac toe board squares, plus a default position to start at and return to
+    - Use the ServoCalibration.py file to determine these values through trial and error
+- XRP will hold at each position for 2 seconds, then return to default 
+'''
 def default_position(angle):
-    drivetrain.turn(0-angle)
+    drivetrain.turn(0-angle) # uses current angle returned from below functions to return to 0
     servo1.set_angle(140)
     servo2.set_angle(0)
     print("At default position.")
@@ -24,7 +30,7 @@ def position_one():
     servo2.set_angle(0)
     print("At position 1.")
     time.sleep(2)
-    default_position(10)
+    default_position(10) # feed current angle as a parameter to allow calculation back to 0
 
 def position_two():
     drivetrain.turn(10)
@@ -47,18 +53,24 @@ def position_four():
     servo1.set_angle(120)
     servo2.set_angle(0)
     print("At position 4.")
+    time.sleep(2)
+    default_position(0)
 
 def position_five():
     drivetrain.turn(0)
     servo1.set_angle(100)
     servo2.set_angle(45)
     print("At position 5.")
+    time.sleep(2)
+    default_position(0)
 
 def position_six():
     drivetrain.turn(0)
     servo1.set_angle(65)
     servo2.set_angle(60)
     print("At position 6.")
+    time.sleep(2)
+    default_position(0)
 
 def position_seven():
     drivetrain.turn(-10)
@@ -84,7 +96,7 @@ def position_nine():
     time.sleep(2)
     default_position(-8)
 
-# Map numbers to their corresponding positions
+# Map MQTT messages to their corresponding positions
 position_map = {
     b'0': default_position,
     b'1': position_one,
@@ -98,15 +110,15 @@ position_map = {
     b'9': position_nine
 }
 
-if False:  # Set to True for publishing
-    for i in range(0, 10):  # publishing messages from 1 to 9
+if False:  # Set to True for publishing testing, this will test all positions 1 - 9
+    for i in range(0, 10):  
         print("about to publish", i)
-        message = str(i).encode()  # Ensure the message is in bytes to match the key format
+        message = str(i).encode()  # message in bytes to match the key format
         c.publish("topic/TicTacToePosition", message, retain=True)
         print(f"Published: {message.decode()}")
         time.sleep(2)  # Give time between publishes to allow processing
 
-else:  # subscribing
+else:  # subscribing, used for actual run of game
     def handle_message(topic, msg):
         try:
             print(f"Received message: {msg}")
