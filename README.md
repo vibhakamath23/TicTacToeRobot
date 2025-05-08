@@ -7,7 +7,7 @@ Execution of this code requires running two separate workspaces: One to define c
 - Huskylens Camera connected to computer through USB
 - XRP and Gripper connected to computer through USB and battery powered
 
-Note that this README is oriented for users that are on macOS. If using another operating system, terminal commands will differ, and the config files used for MQTT communication in 'Camera & Game' will need to be modified. 
+Note that this README is oriented for users that are on macOS. If using another operating system, terminal commands will differ, and the config/connect files used for MQTT communication in 'Camera & Game' will need to be modified. 
 
 # PART ONE: XRP & MQTT
 
