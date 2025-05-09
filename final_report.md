@@ -17,7 +17,7 @@ Beginning this project, baseline completion was defined as the system being able
 
 # Approach
 
-See this [Folder of Project Images]((https://drive.google.com/drive/folders/1O4_QI9AdfXaA_f8W-MEcr27GEszFtbWz?usp=drive_link)) for components and setup. 
+See this [Folder of Project Images](https://drive.google.com/drive/folders/1O4_QI9AdfXaA_f8W-MEcr27GEszFtbWz?usp=drive_link) for components and setup. 
 
 This project works with an XRP serving as a rotating base, a 3D-printed gripper arm with two joints (so the system has three degrees of freedom overall), a lasercut tic tac toe board made of April tags, and a Huskylens Camera mounted above the board. 
 
