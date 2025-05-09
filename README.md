@@ -23,7 +23,9 @@ Once this appears, MQTT Explorer can be used to publish integer messages to `top
 
 # Part Two: Camera & Game
 
-Once successful connection with the MQTT server has been established, the second part of execution is to set up the camera and run game logic. First, add your Wifi SSID and PW in `config.txt` in this folder's MQTT library as well, the same as in Part One. Next, add your server address and client ID into `mqttconnect.py`. Note that this file looks different than the one in the 'XRP & MQTT' folder, as it does not work with the MicroPico library. The `Connect the Huskylens and determine which port (if using MAC) with:
+Once successful connection with the MQTT server has been established, the second part of execution is to set up the camera and run game logic. First, add your Wifi SSID and PW in `config.txt` in this folder's MQTT library as well, the same as in Part One. Next, add the same server address and client ID into `mqttconnect.py`. Note that this file looks different than the one in the 'XRP & MQTT' folder, as it does not work with the MicroPico library. 
+
+Connect the Huskylens and determine which port (if using MAC) with:
 
 ```bash
 ls /dev/tty*
