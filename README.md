@@ -20,7 +20,7 @@ To begin with setting up the MQTT server, change the Wifi SSID and PW values in 
 
 Next, check that your Pico is connected through the MicroPico extension at the bottom of your VSCode terminal. Make sure the camera is disconnected for this part in case the Pico won't connect - occasionally, macOS can malfunction if multiple ports are being used similarly. Once your XRP is successfully connected, run `XRP_MQTT.py` through the MicroPico extension to connect to the server. A `Connection Successful!` message will print in terminal upon completion.
 
-Once this appears, MQTT Explorer or any other MQTT client can be used to publish integer messages to `topic/TicTacToePosition`, and the XRP should move to the appropriate orientation for each given position. 
+Once this appears, MQTT Explorer or any other MQTT client can be used to publish integer messages to the server under `topic/TicTacToePosition`, and the XRP should move to the appropriate orientation for each given position. 
 
 `XRP_MQTT.py` also contains publishing testing code within an included `If False` block. To troubleshoot any issues with publishing, change this to `If True` and edit as needed.
 
