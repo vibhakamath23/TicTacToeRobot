@@ -1,8 +1,6 @@
 # TicTacToeRobot
 Contains functional code and documentation for an Experiential Robotics Platform (XRP) Robot that can play a game of tic tac toe against a human user. Created as part of Tufts University's ME134 Robotics course in Spring 2025. 
 
-**Overview**
-
 Execution of this code requires running two separate workspaces: One to define communication between the XRP and an MQTT server, and another to connect to the Huskylens Camera and run game logic through this MQTT server. To begin, download the folders 'Camera & Game' and 'XRP & MQTT' separately into two workspace configs into VSCode with the MicroPico extension installed, and then follow the consequent directions to run each part respectively. 
 
 # Components Required
