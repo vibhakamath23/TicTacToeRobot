@@ -13,7 +13,7 @@ Note that this README is oriented for users that are on macOS. If using another 
 
 Along with files to set up the MQTT server, this folder also contains `ServoCalibration.py`, which can be used to redefine the hardcoded degrees and angles used in the position functions in `XRP_MQTT.py`. This file allows for trial and error testing of the XRP + Gripper system to determine which degree values for each degree of freedom of the system (XRP base and arm joints) correspond to the orientation required for each space on the board. If using a different XRP system than the original in this project, first run the existing position functions, and if they do not line up properly with the spaces on the tic tac toe board being used, use the calibration file to find appropriate degree values. Secondly, `ServoCalibration.py` also contains code to individually control the gripper jaws of the XRP system, as this functionality is not integrated into game code for this implementation of the project. 
 
-To begin with setting up the MQTT server, add your Wifi SSID and PW in `config.txt` in the MQTT folder, and change the MQTT broker IP in `config.txt` and `mqttconnect.py` as appropriate. You can also customize your `CLIENT_ID` in `mqttconnect.py`.
+To begin with setting up the MQTT server, change the Wifi SSID and PW values in `config.txt` as appropriate in the MQTT folder, as well as the MQTT broker IP in `config.txt` and `mqttconnect.py`. You can also customize your `CLIENT_ID` in `mqttconnect.py`.
 
 Next, make sure your Pico is connected through the MicroPico extension at the bottom of your VSCode terminal, and then run `XRP_MQTT.py` to connect to the server. A "Connection Successful!" message will print in terminal upon completion. 
 
