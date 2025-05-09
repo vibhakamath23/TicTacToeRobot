@@ -13,7 +13,7 @@ The purpose of defining this goal was to gain more experience in dexterous contr
 - Use formal control methods such as state machines, behaviors-based control, or behavior trees
 - Use some form of localization (e.g., line following, wall following, APRIL tag detection, forward kinematics, sensor fusion, etc.)
 
-Beginning this project, baseline completion was defined as the system being able to grip some kind of pointer and play at least one valid move against a human player. This would be done by the XRP and the gripper moving to "point" to the square the robot desired to play in response. 
+Beginning this project, baseline completion was defined as the system being able to grip some kind of pointer and play at least one valid move against a human player. This would be done by the XRP and the gripper moving to "point" to the square the robot desired to play in response to a starting human move.
 
 # Approach
 
