@@ -13,7 +13,7 @@ Note that this README is oriented for users that are on macOS. If using another 
 
 Note: Along with files to set up the MQTT server, this folder also contains `ServoCalibration.py`, which can be used to redefine the hardcoded degrees and angles used in the position functions in `XRP_MQTT.py`. This file allows for trial and error testing of the XRP + Gripper system to determine which degree values for each degree of freedom of the system (XRP base and arm joints) correspond to the orientation required for each space on the board. If using a different XRP system than the original in this project, first run the existing position functions, and if they do not line up properly with the spaces on the tic tac toe board being used, use the calibration file to find appropriate degree values.
 
-To begin with setting up the MQTT server, add your Wifi SSID and PW in `config.txt` in the MQTT folder, and change the MQTT broker IP in `config.txt` and `mqttconnect.py` as appropriate. 
+To begin with setting up the MQTT server, add your Wifi SSID and PW in `config.txt` in the MQTT folder, and change the MQTT broker IP in `config.txt` and `mqttconnect.py` as appropriate. You can also customize your `CLIENT_ID` in `mqttconnect.py`.
 
 Next, run `XRP_MQTT.py` through the MicroPico extension to connect to the server. A "Connection Successful!" message will print in terminal upon completion. 
 
@@ -23,7 +23,7 @@ Once this appears, MQTT Explorer can be used to publish integer messages to `top
 
 # Part Two: Camera & Game
 
-Once successful connection with the MQTT server has been established, the second part of execution is to set up the camera and run game logic. Note that this workspace also contains an MQTT library, but it is different than that used for the XRP as it does not use the MicroPico library. Connect the Huskylens and determine which port (if using MAC) with:
+Once successful connection with the MQTT server has been established, the second part of execution is to set up the camera and run game logic. First, add your Wifi SSID and PW in `config.txt` in this folder's MQTT library as well, the same as in Part One. Next, add your server address and client ID into `mqttconnect.py`. Note that this file looks different than the one in the 'XRP & MQTT' folder, as it does not work with the MicroPico library. The `Connect the Huskylens and determine which port (if using MAC) with:
 
 ```bash
 ls /dev/tty*
