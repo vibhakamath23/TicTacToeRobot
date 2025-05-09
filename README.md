@@ -18,7 +18,7 @@ Along with files to set up the MQTT server, this folder also contains `ServoCali
 
 To begin with setting up the MQTT server, change the Wifi SSID and PW values in `config.txt` as appropriate in the MQTT folder, as well as the MQTT broker IP in `config.txt` and `mqttconnect.py`. You can also customize your `CLIENT_ID` in `mqttconnect.py`.
 
-Next, make sure your Pico is connected through the MicroPico extension at the bottom of your VSCode terminal, and then run `XRP_MQTT.py` to connect to the server. A "Connection Successful!" message will print in terminal upon completion. 
+Next, make sure your Pico is connected through the MicroPico extension at the bottom of your VSCode terminal. Make sure the camera is disconnected for this part in case the Pico won't connect - occasionally macOS can malfunction if multiple ports are being used similarly. Once it is successfully connected, run `XRP_MQTT.py` through the MicroPico extension to connect to the server. A `Connection Successful!` message will print in terminal upon completion.
 
 Once this appears, MQTT Explorer or any other MQTT client can be used to publish integer messages to `topic/TicTacToePosition`, and the XRP should move to the appropriate orientation for each given position. 
 
