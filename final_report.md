@@ -21,7 +21,7 @@ See this [Folder of Project Images](https://drive.google.com/drive/folders/1O4_Q
 
 This project works with an XRP serving as a rotating base, a 3D-printed gripper arm with two joints (so the system has three degrees of freedom overall), a lasercut tic tac toe board made of April tags, and a Huskylens Camera mounted above the board. 
 
-Across two separate workspaces, this project works by using a single file for game logic ('TicTacToeGame.py') that uses an eye-in-the-sky camera constantly monitoring
+Across two separate workspaces, this project uses a single executable for game logic ('TicTacToeGame.py') that uses an eye-in-the-sky camera constantly monitoring
 the Tic Tac Toe board made of nine April Tags. As pieces are played and April tags are covered, this file translates this to a live in-code instantiation of the game board
 and uses a tree-based Minimax algorithm to determine the best optimal move for the robot. This algorithm uses the order in which April tags are covered to differentiate between player moves and robot moves (the human opponent always goes first). 
 
