@@ -7,6 +7,8 @@ Execution of this code requires running two separate workspaces: One to define c
 - Huskylens Camera connected to computer through USB
 - XRP and Gripper connected to computer through USB and battery powered
 
+See the folder of images in `final_report.md` for positioning and setup of components before running.
+
 Note that this README is oriented for users that are on macOS. If using another operating system, terminal commands will differ, and the `mqttconnect.py` file used for MQTT communication in 'Camera & Game' will need to be modified. 
 
 # Part One: XRP & MQTT
