@@ -5,7 +5,7 @@ Execution of this code requires running two separate workspaces: One to define c
 
 # Components Required
 - Huskylens Camera connected to computer through USB
-- XRP and Gripper connected to computer through USB and battery powered
+- XRP with [Gripper](https://www.printables.com/model/919002-xrp-robot-servo-arm-with-grippers/related) connected to computer through USB and battery powered
 
 See the folder of images in `final_report.md` for positioning and setup of components before running.
 
