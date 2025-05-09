@@ -4,8 +4,9 @@ Contains functional code and documentation for an Experiential Robotics Platform
 Execution of this code requires running two separate workspaces: One to define communication between the XRP and an MQTT server, and another to connect to the Huskylens Camera and run game logic through this MQTT server. To begin, download the folders 'Camera & Game' and 'XRP & MQTT' separately into two workspace configs in VSCode with the MicroPico extension installed, and then follow the consequent directions to run each part respectively. 
 
 # Components Required
-- Huskylens Camera connected to computer through USB
-- XRP with [Gripper](https://www.printables.com/model/919002-xrp-robot-servo-arm-with-grippers/related) connected to computer through USB and battery powered
+- Huskylens Camera connected to computer through USB with camera mount
+- XRP with functional [Gripper](https://www.printables.com/model/919002-xrp-robot-servo-arm-with-grippers/related) connected to computer through USB and battery powered
+- 3 x 3 Tic Tac Toe board made of nine April tags
 
 See the folder of images in `final_report.md` for positioning and setup of components before running.
 
