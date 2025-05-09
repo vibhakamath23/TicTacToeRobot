@@ -22,7 +22,7 @@ Next, check that your Pico is connected through the MicroPico extension at the b
 
 Once this appears, MQTT Explorer or any other MQTT client can be used to publish integer messages to the server under `topic/TicTacToePosition`, and the XRP should move to the appropriate orientation for each given position. 
 
-`XRP_MQTT.py` also contains publishing testing code within an included `If False` block. To troubleshoot any issues with publishing, change this to `If True` and edit as needed.
+`XRP_MQTT.py` also contains publishing testing code within an included `If False` block. To troubleshoot any issues with publishing, change this to `If True` and edit as needed. Any published or received messages through subscription will print in terminal.
 
 # Part Two: Camera & Game
 
