@@ -1,7 +1,7 @@
 # TicTacToeRobot
 Contains functional code and documentation for an Experiential Robotics Platform (XRP) Robot that can play a game of tic tac toe against a human user. Created as part of Tufts University's ME134 Robotics course in Spring 2025. 
 
-Execution of this code requires running two separate workspaces: One to define communication between the XRP and an MQTT server, and another to connect to the Huskylens Camera and run game logic through this MQTT server. To begin, download the folders 'Camera & Game' and 'XRP & MQTT' separately into two workspace configs into VSCode with the MicroPico extension installed, and then follow the consequent directions to run each part respectively. 
+Execution of this code requires running two separate workspaces: One to define communication between the XRP and an MQTT server, and another to connect to the Huskylens Camera and run game logic through this MQTT server. To begin, download the folders 'Camera & Game' and 'XRP & MQTT' separately into two workspace configs in VSCode with the MicroPico extension installed, and then follow the consequent directions to run each part respectively. 
 
 # Components Required
 - Huskylens Camera connected to computer through USB
@@ -15,7 +15,7 @@ Along with files to set up the MQTT server, this folder also contains `ServoCali
 
 To begin with setting up the MQTT server, add your Wifi SSID and PW in `config.txt` in the MQTT folder, and change the MQTT broker IP in `config.txt` and `mqttconnect.py` as appropriate. You can also customize your `CLIENT_ID` in `mqttconnect.py`.
 
-Next, run `XRP_MQTT.py` through the MicroPico extension to connect to the server. A "Connection Successful!" message will print in terminal upon completion. 
+Next, make sure your Pico is connected through the MicroPico extension at the bottom of your VSCode terminal, and then run `XRP_MQTT.py` to connect to the server. A "Connection Successful!" message will print in terminal upon completion. 
 
 Once this appears, MQTT Explorer can be used to publish integer messages to `topic/TicTacToePosition`, and the XRP should move to the appropriate orientation for each given position. This is all that needs to be run for this part.
 
