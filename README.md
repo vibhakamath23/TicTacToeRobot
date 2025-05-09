@@ -9,19 +9,19 @@ Execution of this code requires running two separate workspaces: One to define c
 
 Note that this README is oriented for users that are on macOS. If using another operating system, terminal commands will differ, and the config/connect files used for MQTT communication in 'Camera & Game' will need to be modified. 
 
-# PART ONE: XRP & MQTT
+# Part One: XRP & MQTT
 
-Note: Along with setting up the MQTT server, this folder also contains 'ServoCalibration.py', which can be used to redefine the hardcoded degrees and angles used in the position functions in 'XRP_MQTT.py'. This file allows for trial and error testing of the XRP + Gripper system to determine which degree values for each degree of freedom of the system (XRP base and arm joints) correspond to the orientation required for each space on the board. If using a different XRP system than the original in this project, first run the existing position functions, and if they do not line up properly with the spaces on the tic tac toe board being used, use the calibration file to find appropriate degree values.
+Note: Along with files to set up the MQTT server, this folder also contains `ServoCalibration.py`, which can be used to redefine the hardcoded degrees and angles used in the position functions in `XRP_MQTT.py`. This file allows for trial and error testing of the XRP + Gripper system to determine which degree values for each degree of freedom of the system (XRP base and arm joints) correspond to the orientation required for each space on the board. If using a different XRP system than the original in this project, first run the existing position functions, and if they do not line up properly with the spaces on the tic tac toe board being used, use the calibration file to find appropriate degree values.
 
-To begin with setting up the MQTT server, add your Wifi SSID and PW in 'config.txt', and change the MQTT broker IP in 'config.txt' and 'mqttconnect.py' as appropriate. 
+To begin with setting up the MQTT server, add your Wifi SSID and PW in `config.txt` in the MQTT folder, and change the MQTT broker IP in `config.txt` and `mqttconnect.py` as appropriate. 
 
-Next, run 'XRP_MQTT.py' through the MicroPico extension to connect to the server. A "Connection Successful!" message will print in terminal upon completion. 
+Next, run `XRP_MQTT.py` through the MicroPico extension to connect to the server. A "Connection Successful!" message will print in terminal upon completion. 
 
-Once this appears, MQTT Explorer can be used to publish integer messages to 'topic/TicTacToePosition', and the XRP should move to the appropriate orientation for each given position. This is all that needs to be run for this part.
+Once this appears, MQTT Explorer can be used to publish integer messages to `topic/TicTacToePosition`, and the XRP should move to the appropriate orientation for each given position. This is all that needs to be run for this part.
 
-'XRP_MQTT.py' also contains publishing testing code within an included 'If False' block. To troubleshoot any issues with publishing, change this to 'If True' and edit as needed.
+`XRP_MQTT.py` also contains publishing testing code within an included `If False` block. To troubleshoot any issues with publishing, change this to `If True` and edit as needed.
 
-# PART TWO: Camera & Game
+# Part Two: Camera & Game
 
 Once successful connection with the MQTT server has been established, the second part of execution is to set up the camera and run game logic. Note that this workspace also contains an MQTT library, but it is different than that used for the XRP as it does not use the MicroPico library. Connect the Huskylens and determine which port (if using MAC) with:
 
