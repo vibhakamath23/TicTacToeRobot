@@ -35,8 +35,6 @@ Note that in the main demo video, the gripper system is unplugged and inactive. 
 
 # Impact
 
-## Impact
-
 Dexterous control, camera vision, and human-robot interaction as explored through this project are integral to many developing robotic fields, including medical (particularly surgical) robotics. The intention behind this work was to understand these topics on a deeper level to better conceptualize how they may be implemented in modern surgical systems.
 
 In particular, surgical robotics relies heavily on the seamless coordination between sensing, real-time decision-making, and precise actuation, all of which were key elements in this project. Developing this tic tac toe robot required integrating computer vision with logic-based decision making, and then translating those decisions into physical, spatially accurate movements. These same capabilities are critical when, for example, a surgical robot must visually identify anatomical features, determine an optimal path for incision or manipulation, and execute that plan with millimeter-level precision.
